@@ -65,8 +65,8 @@ const ProductId = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 flex-wrap relative">
-      <div className="w-full px-16">
-      <button onClick={()=>goBack()} className="float-left bg-blue-beauty text-white font-semibold rounded-lg px-4 py-2 hover:opacity-80">
+      <div className="w-full px-2 sm:px-16">
+      <button onClick={()=>goBack()} className="float-left bg-blue-beauty text-white font-semibold rounded-lg px-2 py-1 sm:px-4 sm:py-2 hover:opacity-80">
         <i className="fa-solid fa-arrow-left"></i> Regresar</button>
       </div>
       <section className="content">
