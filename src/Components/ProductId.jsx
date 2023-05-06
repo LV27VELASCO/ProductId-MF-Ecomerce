@@ -4,15 +4,13 @@ import axios from "axios";
 import "../styles/productId.css";
 import useAddCartProduct from "../Hooks/useAddCartProduct";
 import Modal from "./Modal";
-import useProductAdd from "../Hooks/useProductAdd";
 
-const ProductId = () => {
+const ProductId = ({addToCard,NegativeState}) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState();
   const { productCard, setProductCard, minProduct, plusProduct } =
     useAddCartProduct();
-    const {add,setAdd} = useProductAdd();
   const [imgBarckground, setImgBarckground] = useState();
   const [msg, setMsg] = useState(false);
 
@@ -81,17 +79,18 @@ const ProductId = () => {
         })
         .then((res) => {
           console.log(res.data);
+          addToCard()
         })
         .catch((err) => {
           if (err.response.status == 403)
           {
             setMsg(err.response.data.error);
-            setAdd(!add)
             setTimeout(() => {
               setMsg(false);
             }, 3000);
           }
         });
+        NegativeState()
     } else {
       navigate("/login");
     }
