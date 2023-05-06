@@ -99,6 +99,8 @@
       display: flex;
       gap: 3rem;
       align-items: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
       justify-content: center;
       justify-content: space-between;
       height: auto;
@@ -116,10 +118,15 @@
     .gallery__thumnail.oscure{
       opacity: 1;
     }
-    .gallery__thumnail:hover {
+    .gallery__thumnail:focus {
       cursor: pointer;
       border: 2px solid hsla(213, 80%, 45%, 0.858);
     }
+    .gallery__thumnail:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 3px 0px hsla(213, 80%, 45%, 0.741);
+    }
+    
   }
   
   .details {

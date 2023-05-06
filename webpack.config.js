@@ -49,6 +49,7 @@ module.exports = (_, argv) => {
       remotes: {},
       exposes: {
         "./ProductId":"./src/Components/ProductId.jsx",
+        "./ActuCard":"./src/Hooks/useProductAdd.js",
       },
       shared: {
         ...deps,
