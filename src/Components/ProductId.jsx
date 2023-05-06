@@ -5,7 +5,7 @@ import "../styles/productId.css";
 import useAddCartProduct from "../Hooks/useAddCartProduct";
 import Modal from "./Modal";
 
-const ProductId = ({addToCard,NegativeState}) => {
+const ProductId = ({addToCard}) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState();
@@ -90,7 +90,6 @@ const ProductId = ({addToCard,NegativeState}) => {
             }, 3000);
           }
         });
-        NegativeState()
     } else {
       navigate("/login");
     }
