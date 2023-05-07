@@ -93,12 +93,15 @@ const ProductId = ({addToCard}) => {
     }
   };
   const addProduct = () => {
-    let prod = {
-      quantity: productCard,
-      productId: product?.id,
-    };
-    pushDataProduct(prod);
-    setProductCard(0);
+    if(productCard>0)
+    {
+      let prod = {
+        quantity: productCard,
+        productId: product?.id,
+      };
+      pushDataProduct(prod);
+      setProductCard(0);
+    }   
   };
   const goBack = () => {
     navigate("/");
@@ -197,7 +200,7 @@ const ProductId = ({addToCard}) => {
                 className="fa-solid fa-plus input__plus"
               ></i>
             </div>
-            <button onClick={() => addProduct()} className="details__button">
+            <button onClick={() => addProduct()} className={productCard>0?"details__button":"details__button inactive"}>
               <i className="fa-solid fa-cart-arrow-down text-xl text-white"></i>
               Add to cart
             </button>

@@ -188,6 +188,13 @@
     cursor: pointer;
     opacity: 0.7;
   }
+
+  .details__button.inactive{
+    pointer-events: none;
+    opacity: .4;
+  }
+  
+
   @media (min-width: 1115px) {
     .details {
       padding-top: 40px;
