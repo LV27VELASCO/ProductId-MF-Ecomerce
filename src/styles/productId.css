@@ -58,7 +58,6 @@
   @media (min-width: 1115px) {
     .gallery__next {
       display: none;
-      display: false;
     }
   }
   .gallery__thumnails {

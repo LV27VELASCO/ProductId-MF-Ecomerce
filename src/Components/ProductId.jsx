@@ -59,7 +59,6 @@ const ProductId = ({addToCard}) => {
         imgs[counter].classList.remove("oscure");
       }
       if (e == "next") {
-        console.log(counter);
         counter = counter + 1;
         if (counter == 3) counter = 2;
         imgs[counter].classList.remove("oscure");
@@ -78,7 +77,6 @@ const ProductId = ({addToCard}) => {
           },
         })
         .then((res) => {
-          console.log(res.data);
           addToCard()
         })
         .catch((err) => {
@@ -127,7 +125,7 @@ const ProductId = ({addToCard}) => {
           <div className="gallery__thumnails">
             <i
               onClick={() => mobilePortada("prev")}
-              className="fa-solid fa-chevron-left gallery__previus"
+              className="fa-solid fa-chevron-left gallery__previus hover:bg-blue-beauty hover:text-white transition-colors duration-300"
             ></i>
             <i
               onClick={() => mobilePortada("next")}
